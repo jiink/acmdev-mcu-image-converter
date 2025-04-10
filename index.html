@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to C Array Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Image to C Array Converter</h1>
+    <p>Upload an image, choose the number of colors, and generate a C header file with the image data.</p>
+
+    <div id="upload-area" class="upload-area">
+        <p>Click or drag and drop an image here to upload</p>
+        <input type="file" id="file-input" accept="image/*" hidden>
+    </div>
+
+    <label for="color-slider">Number of Colors:</label>
+    <input type="range" id="color-slider" min="1" max="255" value="128">
+    <span id="color-value">128</span>
+
+    <button id="convert-button">Convert</button>
+
+    <textarea id="output" readonly placeholder="Generated C header file will appear here..."></textarea>
+
+    <button id="download-button">Download</button>
+    <button id="copy-button">Copy to Clipboard</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
