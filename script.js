@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const paletteArray = Array.from(palette.keys()).map(color => `0x${(color >>> 0).toString(16).padStart(8, '0')}`);
-        const dataArray = data.map((value, index) => (index % width === 0 ? '\n    ' : '') + value.toString());
+        const dataArray = data.map((value, index) => (index % width === 0 ? '\n    ' : '') + `0x${value.toString(16).padStart(2, '0')}`);
 
         const header = `#ifndef ${headerName}_H\n#define ${headerName}_H\n\n` +
             `#include <stdint.h>\n\n` +
