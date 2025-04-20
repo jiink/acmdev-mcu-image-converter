@@ -11,7 +11,7 @@
     <p>Upload an image, choose the number of colors, and generate a C header file with the image data.</p>
 
     <div id="upload-area" class="upload-area">
-        <p>Click or drag and drop an image here to upload</p>
+        <p>Click or drag and drop an image here to upload and convert</p>
         <input type="file" id="file-input" accept="image/*" hidden>
     </div>
 
@@ -19,7 +19,8 @@
     <input type="range" id="color-slider" min="1" max="255" value="128">
     <span id="color-value">128</span>
 
-    <button id="convert-button">Convert</button>
+    <label for="indexed-colors">Indexed Colors:</label>
+    <input type="checkbox" id="indexed-colors">
 
     <textarea id="output" readonly placeholder="Generated C header file will appear here..."></textarea>
 
